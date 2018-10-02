@@ -57,6 +57,12 @@ To mount an external hard disk you can run the command below. Note that the PART
 2. echo "PARTUUID=cf34d76f-1531-4b95-8bce-63431083405e /media vfat defaults 0 0" | sudo tee -a /etc/fstab
 
 
+### Setup Power Switch
+1. Copy shutdownirq.py /etc/shutdownirq.py
+2. sudo chmod 777 /etc/shutdowirq.py
+3. sudo chown root:root /etc/shutdowirq.py
+2. sudo sed -i '$ i python /etc/shutdownirq.py &' /etc/rc.local
+
 ### Setup nginex
 
 TODO
